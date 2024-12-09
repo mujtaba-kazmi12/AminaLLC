@@ -1,122 +1,4 @@
 
-// import { Box, Button, Heading, Text, VStack, Stack } from "@chakra-ui/react";
-
-// export default function CallToActionSection() {
-//   return (
-//     <Box
-//       width={{base:"90%",lg:"100%"}}
-//       bg="teal.300"
-//       py={12}
-//       px={4}
-//       borderRadius="lg"
-//       textAlign="center"
-//       position="relative"
-//       overflow="hidden"
-//       maxW="container.xl"
-//       mx="auto"
-//       height="550px" // Increased height
-//       display="flex"
-//       alignItems="center" // Centers content vertically
-//       justifyContent="center" // Centers content horizontally
-//       mt="5"
-//     >
-//       {/* Background Shapes */}
-//       <Box
-//         position="absolute"
-//         top="-50px"
-//         left="-50px"
-//         width="300px"
-//         height="300px"
-//         bg="teal.400"
-//         borderRadius="full"
-//         opacity={0.2}
-//       />
-//       <Box
-//         position="absolute"
-//         bottom="-50px"
-//         right="-50px"
-//         width="200px"
-//         height="200px"
-//         bg="teal.500"
-//         borderRadius="full"
-//         opacity={0.2}
-//       />
-
-//       {/* Content */}
-//       <VStack spacing={4} position="relative" zIndex={1}>
-//         <Heading
-//           as="h1"
-//           fontSize={{ base: "4xl", md: "4xl", lg: "60px" }}
-//           fontWeight="bold"
-//           color="#072032"
-//           lineHeight="0.3"
-//           fontFamily='"Instrument Sans", sans-serif'
-//         >
-//           Let’s start for
-//         </Heading>
-//         <Heading
-//           as="h2"
-//           fontSize={{ base: "4xl", md: "4xl", lg: "60px" }}
-//           fontWeight="bold"
-//           color="#072032"
-//           fontFamily='"Instrument Sans", sans-serif'
-//         >
-//           14 days free trial
-//         </Heading>
-//         <Text
-//           fontSize={{ base: "md", md: "lg", lg: "20px" }}
-//           color="#072032"
-//           maxW="xl"
-//           mx="auto"
-//           fontFamily='"DM Sans", sans-serif'
-          
-          
-//         >
-//           Optimize your impact this holiday season with an AI-driven,
-//           multichannel marketing strategy.
-//         </Text>
-
-//         {/* Buttons */}
-//         <Stack
-//           direction={{ base: "column", sm: "row" }}
-//           spacing={4}
-//           justify="center"
-//           mt={6}
-//         >
-//           <Button
-//              bg="#072032"
-//              color="white"
-//              borderRadius="15px"
-//              px={{ base: 8, md: 8, lg: 10 }}
-//              py={{ base: 6, md: 6, lg: 8 }}
-//              fontWeight="bold"
-//              border="2px solid #072032"
-//              _hover={{ bg: "transparent", color: "#072032", borderColor: "black" }}
-//              mt={{ base: "5px", md: "48px", lg: "5px" }}
-//              width={{ base: "100%", md: "auto" }}
-//           >
-//             Signup now
-//           </Button>
-//           <Button
-//             bg="transparent"
-//             color="#072032"
-//             borderRadius="15px"
-//             px={{ base: 8, md: 8, lg: 10 }}
-//             py={{ base: 6, md: 6, lg: 8 }}
-//             fontWeight="bold"
-//             border="2px solid #072032"
-//             _hover={{ bg: "gray.100", color: "#072032", borderColor: "black" }}
-//             mt={{ base: "5px", md: "48px", lg: "5px" }}
-//             width={{ base: "100%", md: "auto" }}
-            
-//           >
-//             Request for demo
-//           </Button>
-//         </Stack>
-//       </VStack>
-//     </Box>
-//   );
-// }
 
 
 import { Box, Flex, Heading, Text, VStack, Button, Image } from "@chakra-ui/react";
@@ -159,20 +41,20 @@ export default function CallToActionSection() {
 
       {/* Main Content */}
       <Flex
-        direction={{ base: "column", md: "row" }}
-        align="center"
-        justify="space-between"
+        direction={{ base: "column", md: "row" }} // Column for small screens, row for large screens
+        align={{ base: "center", md: "center" }} // Center alignment for both small and large screens
+        justify="space-between" // Keeps original spacing for large screens
         gap={8}
         zIndex={1}
         position="relative"
       >
         {/* Left Side - Contact Information */}
         <VStack
-          align="flex-start"
+          align={{ base: "center", md: "flex-start" }} // Center on small screens, left-align for large screens
           spacing={4}
-          textAlign={{ base: "center", md: "left" }}
           maxW="lg"
           color="white"
+          textAlign={{ base: "center", md: "left" }} // Center text on small screens, left-align for large screens
         >
           <Heading
             as="h2"
@@ -211,7 +93,7 @@ export default function CallToActionSection() {
             py={{ base: 4, md: 6 }}
             fontWeight="bold"
             _hover={{ bg: "orange.700" }}
-            mt={{lg:"10px"}}
+            mt={{ lg: "10px" }}
           >
             Send a Quick Message!
           </Button>
@@ -223,7 +105,7 @@ export default function CallToActionSection() {
             src="/AminaBg.png" // Replace with the actual path to your logo
             alt="Company Logo"
             maxW={{ base: "200px", md: "300px", lg: "400px" }}
-            mx={{ base: "auto", md: "0" }}
+            mx={{ base: "auto", md: "0" }} // Centered for small screens, keeps original alignment for large screens
           />
         </Box>
       </Flex>

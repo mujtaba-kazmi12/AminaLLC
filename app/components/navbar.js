@@ -95,7 +95,7 @@ export default function Navbar() {
       </Flex>
 
       {/* Drawer for small and medium screens */}
-      <Drawer isOpen={isOpen} placement="right" onClose={onClose} finalFocusRef={btnRef}>
+      <Drawer isOpen={isOpen} placement="left" onClose={onClose} finalFocusRef={btnRef}>
         <DrawerOverlay />
         <DrawerContent>
           <DrawerHeader>

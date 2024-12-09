@@ -82,23 +82,7 @@ export default function HeroSection() {
               </Text>
             </motion.div>
 
-            {/* Fade in Button and Features */}
-            <motion.div variants={fadeInUp}>
-              <Button
-                bg="#1f1f57"
-                color="white"
-                borderRadius="15px"
-                px={{ base: 8, md: 8, lg: 10 }}
-                py={{ base: 6, md: 6, lg: 8 }}
-                fontWeight="bold"
-                border="2px solid #072032"
-                _hover={{ bg: "transparent", color: "#072032", borderColor: "black" }}
-                width={{ base: '80%', md: 'auto' }}
-                mt={{lg:3}}
-              >
-                Donate Now
-              </Button>
-            </motion.div>
+          
 
            
           </VStack>
